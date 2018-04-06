@@ -32,10 +32,13 @@ process_data <- function(x, lob) {
       single = Single,
       posted_reserve_97 = PostedReserve97
     ) %>%
+    group_by(group_code, accident_year) %>%
+    arrange(development_lag) %>%
     mutate(
       calendar_year = accident_year + development_lag - 1,
       incremental_paid_loss = cumulative_paid_loss - lag(cumulative_paid_loss, default = 0)
-    )
+    ) %>%
+    ungroup()
 }
 
 schedule_p <- data_urls %>%
