@@ -1,43 +1,42 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
-[![Travis build status](https://travis-ci.org/kevinykuo/insurance.svg?branch=master)](https://travis-ci.org/kevinykuo/insurance)
 
-insurance
-=========
+[![Travis build
+status](https://travis-ci.org/kasaai/insurance.svg?branch=master)](https://travis-ci.org/kasaai/insurance)
 
-The goal of **insurance** is to provide a curated repository of tidy datasets that can be used in insurance and actuarial science research.
+# insurance
 
-Installation
-------------
+The goal of **insurance** is to provide a curated repository of tidy
+datasets that can be used in insurance and actuarial science research.
 
-You can install the development version from [GitHub](https://github.com/) with:
+## Installation
+
+You can install the development version from
+[GitHub](https://github.com/) with:
 
 ``` r
 # install.packages("devtools")
-devtools::install_github("kevinykuo/insurance")
+devtools::install_github("kasaai/insurance")
 ```
 
-Example
--------
-
-Currently, the only available dataset is `schedule_p`:
+## Example
 
 ``` r
 library(insurance)
 schedule_p
 #> # A tibble: 77,900 x 16
-#>    lob           group_code group_name      accident_year development_year
-#>    <chr>         <chr>      <chr>                   <int>            <int>
-#>  1 private_pass… 43         IDS Property C…          1988             1988
-#>  2 private_pass… 43         IDS Property C…          1988             1989
-#>  3 private_pass… 43         IDS Property C…          1988             1990
-#>  4 private_pass… 43         IDS Property C…          1988             1991
-#>  5 private_pass… 43         IDS Property C…          1988             1992
-#>  6 private_pass… 43         IDS Property C…          1988             1993
-#>  7 private_pass… 43         IDS Property C…          1988             1994
-#>  8 private_pass… 43         IDS Property C…          1988             1995
-#>  9 private_pass… 43         IDS Property C…          1988             1996
-#> 10 private_pass… 43         IDS Property C…          1988             1997
+#>    lob   group_code group_name accident_year development_year
+#>    <chr> <chr>      <chr>              <int>            <int>
+#>  1 priv… 43         IDS Prope…          1988             1988
+#>  2 priv… 43         IDS Prope…          1989             1989
+#>  3 priv… 43         IDS Prope…          1990             1990
+#>  4 priv… 43         IDS Prope…          1991             1991
+#>  5 priv… 43         IDS Prope…          1992             1992
+#>  6 priv… 43         IDS Prope…          1993             1993
+#>  7 priv… 43         IDS Prope…          1994             1994
+#>  8 priv… 43         IDS Prope…          1995             1995
+#>  9 priv… 43         IDS Prope…          1996             1996
+#> 10 priv… 43         IDS Prope…          1997             1997
 #> # ... with 77,890 more rows, and 11 more variables: development_lag <int>,
 #> #   incurred_loss <dbl>, cumulative_paid_loss <dbl>, bulk_loss <dbl>,
 #> #   earned_premium_direct <dbl>, earned_premium_ceded <dbl>,
